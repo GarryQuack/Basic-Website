@@ -50,6 +50,10 @@ body{
     left: 10px;
 }
 
+/*input:checked + .slider {
+    background-color: #8d8d8d;
+} */
+
 input:checked + .slider:before{
     transform: translateX(80px);
 }
