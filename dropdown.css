@@ -1,0 +1,17 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+  }
+  
+  .dropdown:hover .submenu {
+    display: block;
+  }
+  
