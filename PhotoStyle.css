@@ -50,9 +50,9 @@ body{
     left: 2px;
 }
 
-/*input:checked + .slider {
+input:checked + .slider {
     background-color: #8d8d8d;
-} */
+}
 
 input:checked + .slider:before{
     transform: translateX(16px);
@@ -64,3 +64,5 @@ input:checked + .slider:before{
 .slider::before {
     border-radius: 4px;
 }
+
+
