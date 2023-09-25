@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a test of the pilot</title>
+    <link href="StyleSheet1.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Put in a photo URL</h1>
+    <label>Enter any photo URL:</label>
+    <br>
+    <input type="text" id="photo_url" placeholder="Photo URL">
+    <button onclick="showPhoto()">Submit</button>
+    <br>
+    <div id="photo_container">
+        <!-- The image will be displayed here -->
+    </div>
+    <script>
+        function showPhoto() {
+            var photo_url = document.getElementById("photo_url").value;
+            var photo_container = document.getElementById("photo_container");
+            photo_container.innerHTML = "<img src='" + photo_url + "' alt='Photo' height='300px'/>";
+        }
+    </script>
+</body>
+</html>
