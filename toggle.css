@@ -68,11 +68,12 @@ body{
        border-radius: 20px;
    }
    
-   /* Add this to your existing CSS file or create a new one */
 @media only screen and (max-width: 600px) {
-    /* Styles for screens smaller than 600px (typical for mobile) */
     body {
-        font-size: 14px; /* Adjust font size for better readability on smaller screens */
-        /* Add more styles as needed */
+        font-size: 14px; 
     }
+}
+
+button {
+    padding: 10px;
 }

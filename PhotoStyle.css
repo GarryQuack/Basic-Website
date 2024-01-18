@@ -10,6 +10,11 @@ body{
  background: linear-gradient(to right, #313231, #b7bdc0);
 }
 
+button {
+    padding: 10px; 
+}
+
+
 .toggle{
     position: relative;
 }
@@ -66,11 +71,16 @@ input:checked + .slider:before{
 }
 
 
-/* Add this to your existing CSS file or create a new one */
 @media only screen and (max-width: 600px) {
-    /* Styles for screens smaller than 600px (typical for mobile) */
     body {
-        font-size: 14px; /* Adjust font size for better readability on smaller screens */
-        /* Add more styles as needed */
+        font-size: 14px;
+    }
+    #centrepls{
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+        display: flex;
     }
 }
