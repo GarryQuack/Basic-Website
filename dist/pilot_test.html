@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a test of the pilot</title>
+    <link href="/index.10bb9dad.css" rel="stylesheet">
+    <link rel="stylesheet" href="/index.1702c064.css">
+    <link rel="icon" href="/icon.9fca24d7.png">    
+</head>
+<body>
+  <div class="navbar">
+    <a href="/index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Typing
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/text.html">Type stuff</a>
+            <a href="/pilot_test.html">Make a photo appear</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Simple stuff
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/date%20page.html">See date and time</a>
+            <a href="/photo.html">Make a photo disappear</a>
+            <a href="/Video.html">Testing an autoplay video</a>
+        </div>
+    </div>
+</div>
+
+    <h1>Put in a photo URL</h1>
+    <label>Enter any photo URL:</label>
+    <br>
+    <input type="text" id="photo_url" placeholder="Photo URL">
+    <button onclick="showPhoto()">Submit</button>
+    <br>
+    <div id="photo_container">
+        <!-- The image will be displayed here -->
+    </div>
+    <script>function showPhoto() {
+    var photo_url = document.getElementById("photo_url").value;
+    var photo_container = document.getElementById("photo_container");
+    photo_container.innerHTML = "<img src='" + photo_url + "' alt='Photo' height='300px'/>";
+}
+
+</script>
+<script src="/pilot_test.d43e95eb.js"></script></body>
+</html>

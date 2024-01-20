@@ -1,0 +1,31 @@
+﻿body {
+  color: #fff;
+  background-color: #789;
+  font-family: Lucida Console, Courier New, monospace;
+}
+
+@media only screen and (width <= 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  video {
+    width: 80%;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 7px;
+}
+
+input {
+  font-size: 20px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=index.10bb9dad.css.map */
