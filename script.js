@@ -1,6 +1,6 @@
 async function getWeather() {
     const cityName = document.getElementById('cityInput').value;
-    const apiKey = 'YOUR_API_KEY_HERE';
+    const apiKey = '409ff1d160424424814195944242202';
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`;
 
     try {
