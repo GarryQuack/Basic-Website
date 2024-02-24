@@ -36,13 +36,43 @@
     </div>
 </div>
 
-<h1>Weather App</h1>
-<div id="weather">
-    <input type="text" id="cityInput" placeholder="Enter a city name">
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weatherResult"></div>
-</div>
+<span class="weather">
+    <h1>Weather App</h1>
+    <div id="weather">
+        <input type="text" id="cityInput" placeholder="Enter a city name">
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherResult"></div>
+    </div>
+</span>
 
-<script src="script.js"></script> <!-- Link your JS file here -->
+<script>
+            document.getElementById("inputForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            getWeather();
+        });
+
+        async function getWeather() {
+    const cityName = document.getElementById('cityInput').value;
+    const apiKey = '409ff1d160424424814195944242202';
+    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        
+        if(response.ok) {
+            displayWeather(data);
+        } else {
+            throw new Error(data.message);
+        }
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+        document.getElementById('weatherResult').innerHTML = `Error: ${error.message}`;
+    }
+}
+
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -4,8 +4,6 @@ body {
     font-family: "Lucida Console", "Courier New", monospace;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     flex-direction: column;
 }
@@ -40,4 +38,10 @@ video {
 
 #weatherResult {
     margin-top: 20px;
+}
+
+.weather{
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
 }
