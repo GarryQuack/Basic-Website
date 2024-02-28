@@ -42,5 +42,22 @@
   let other people get their hands on it? Please don't judge any bad parts of this, I am very new 
   and every page is just a test on certain features. Anyways have fun! 
 </p>
+
+<button id="bunton" onClick="changeColour()">???</button>
+
+<script>
+    function getRandomColour(){
+        let letters = "0123456789ABCDEF"
+        let colour = '#';
+        for (let i = 0; i < 6; i++) {
+            colour += letters[Math.floor(Math.random() * 16)];
+        }
+        return colour
+    }
+    function changeColour(){
+        let newColour = getRandomColour()
+        document.body.style.backgroundColor = newColour;
+    }
+</script>
 </body>
 </html>
