@@ -5,6 +5,7 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
+  border-radius: 5px;
 }
 
 .navbar a {
@@ -22,6 +23,7 @@ body {
 }
 
 .dropdown .dropbtn {
+  border-radius: 5px;
   font-size: 16px;  
   border: none;
   outline: none;
