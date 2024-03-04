@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
-<link href="PhotoStyle.css" rel="stylesheet">
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Photo test</title>
-    <link rel="stylesheet" href="dropdown.css">
-    <link rel="icon" href="./media/">
+    <title>Date and Time</title>
+    <link href="../css/StyleSheet1.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="icon" href="../media/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <div class="navbar">
@@ -32,23 +33,15 @@
             </div>
         </div>
     </div>
-    <span id="header">
+</div>
+    <h1>The date and time is...</h1>
+    <p id="demo"></p>
 
-    </span>
-<br>
-    <div id="othercenter">
-        <h1>This is a school.</h1>
-        <img id="photo" src="./media/Example Photo.jpeg" alt="The Royal Liberty School" height="280px"/>
-    </div>
-    <div id="centrepls">
-        <label class="toggle">
-            <span class="onoff">ON</span>
-            <input type="checkbox"/>
-            <span class="slider"></span>
-        </label>
-    </div>
+    <button type="button"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to show the Date and Time.
+    </button>
 
+    <div></div>
 </body>
 </html>
-<div></div>
-<script src="Script1.js"></script>
