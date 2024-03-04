@@ -11,11 +11,28 @@
 
 </head>
 <body>
-    <script>
-        fetch('/dropdown.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-    </script>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Typing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="text.html">Type stuff</a>
+                <a href="pilot_test.html">Make a photo appear</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Simple stuff
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="date page.html">See date and time</a>
+                <a href="photo.html">Make a photo disappear</a>
+                <a href="Video.html">Testing an autoplay video</a>
+            </div>
+        </div>
+    </div>
 </div>
     <h1>The date and time is...</h1>
     <p id="demo"></p>
