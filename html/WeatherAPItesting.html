@@ -39,40 +39,44 @@
 <span class="weather">
     <h1>Weather App</h1>
     <div id="weather">
-        <input type="text" id="cityInput" placeholder="Enter a city name">
-        <button onclick="getWeather()">Get Weather</button>
+        <!-- Wrap the input and button in a form element -->
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter a city name">
+            <button type="submit">Get Weather</button>
+        </form>
         <div id="weatherResult"></div>
     </div>
-</span>
-
-<script>
-            document.getElementById("inputForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from actually submitting
+    
+    <script>
+        // Attach the event listener to the form submit event
+        document.getElementById("weatherForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting, which would refresh the page
             getWeather();
         });
-
+    
         async function getWeather() {
-    const cityName = document.getElementById('cityInput').value;
-    const apiKey = '409ff1d160424424814195944242202';
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`;
-
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        
-        if(response.ok) {
-            displayWeather(data);
-        } else {
-            throw new Error(data.message);
+            const cityName = document.getElementById('cityInput').value;
+            const apiKey = '409ff1d160424424814195944242202';
+            const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`;
+    
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                
+                if(response.ok) {
+                    displayWeather(data);
+                } else {
+                    throw new Error(data.message);
+                }
+            } catch (error) {
+                console.error("Error fetching weather data:", error);
+                document.getElementById('weatherResult').innerHTML = `Error: ${error.message}`;
+            }
         }
-    } catch (error) {
-        console.error("Error fetching weather data:", error);
-        document.getElementById('weatherResult').innerHTML = `Error: ${error.message}`;
-    }
-}
-
-</script>
-
-<script src="script.js"></script>
+    
+        // Make sure to define your displayWeather function somewhere in your scripts
+    </script>
+    
+<script src="../js/script.js"></script>
 </body>
 </html>
